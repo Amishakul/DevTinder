@@ -1,0 +1,1 @@
+To run the vite project: npm run dev
