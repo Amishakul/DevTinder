@@ -5,7 +5,7 @@ const Login = () => {
   const [emailId, setEmailId] = useState("amishakulkarni@gmail.com");
   const [password, setPassword] = useState("amishabouncy");
 
-  const handleLogin = async () => {
+  const handleLogin =  () => {
 
 
   }
