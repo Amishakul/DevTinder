@@ -1,1 +1,7 @@
-To run the vite project: npm run dev
+1. To run the vite project: npm run dev
+2. Basename meaning in BrowserRouter -> 
+if basename = '/' then all the routers further created for specific routing will first start with / and then the remaning router name.
+for eg: if we are creating users page/route then the route will start with: "/users" like this.
+if we create a route/page named as login then: "/login" 
+if by name connections then: "/connections".
+so basically basename acts as a base start for further routers.
