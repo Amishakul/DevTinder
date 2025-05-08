@@ -1,6 +1,23 @@
-import React from 'react'
+import React from 'react';
+import { auth } from "./Utils/Firebase";
+import { signOut } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
+
+  const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    
+    signOut(auth).then(() => {
+    // Sign-out successful.
+    navigate("/login");
+    }).catch((error) => {
+    // An error happened.
+        alert("Error during signout:", error)
+    });
+  }
+
   return (
     <div className="navbar bg-base-300 shadow-sm">
   <div className="flex-1">
@@ -25,7 +42,9 @@ const NavBar = () => {
           </a>
         </li>
         <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
+        <li>
+          <button onClick={handleSignOut}>Logout</button>
+        </li>
       </ul>
     </div>
   </div>

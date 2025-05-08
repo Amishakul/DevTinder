@@ -1,8 +1,16 @@
 import React, { useRef, useState } from 'react'
+import { checkValidData } from './Utils/ValidData';
+import { auth } from "./Utils/Firebase";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
   const [isSignInForm, setIsSignInForm] = useState(true);
+
+  const [errorMessage, setErrorMessage] = useState(null);
+
+  const navigate = useNavigate();
   
   const name = useRef(null);
   const email = useRef(null);
@@ -10,8 +18,59 @@ const Login = () => {
 
   const handleLogin =  () => {
 
+    console.log(email.current.value);
+    console.log(pass.current.value);
+
+    const message = checkValidData(email.current.value, pass.current.value);
+    setErrorMessage(message);
+
+    if(message) return;
+
+    if(!isSignInForm){
+
+  createUserWithEmailAndPassword(auth, email.current.value, pass.current.value)
+  .then((userCredential) => {
+    // Signed up 
+    const user = userCredential.user;
+    alert("Account created successfully, Login to Continue")
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    setErrorMessage(errorCode + "-" + errorMessage)
+    // ..
+  });
+    }
+
+
+
+
+    else{
+
+      
+
+
+signInWithEmailAndPassword(auth, email.current.value, pass.current.value)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    navigate('/profile');
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    setErrorMessage(errorCode + "-" + errorMessage);
+  });
+      
+    }
+
+
 
   }
+
+
 
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
@@ -38,6 +97,8 @@ const Login = () => {
   <legend className="fieldset-legend">Password</legend>
   <input type="text" ref={pass} className="input" placeholder="Enter your password"  />
 </fieldset>
+
+<p className='text-red-500 font-bold text-lg py-2'>{errorMessage}</p>
 
     </div>
     <div className="card-actions justify-center">

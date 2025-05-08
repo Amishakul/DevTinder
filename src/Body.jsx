@@ -9,6 +9,7 @@ const Body = () => {
       <NavBar />
       <Outlet /> 
       {/* All the childeren routes are insert into this outlet components, so that they can be rendered in the body component */}
+      
       <Footer/>
     </div>
   )
