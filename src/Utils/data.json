@@ -1,0 +1,203 @@
+[
+    {
+      "id": 1,
+      "name": "Ava Thompson",
+      "age": 29,
+      "gender": "Female",
+      "techStack": ["React", "Node.js", "GraphQL"],
+      "interest": ["Hackathons", "Open Source", "Indie Music"],
+      "bio": "Full-stack developer who loves building side projects and singing at karaoke nights.",
+      "avatar": "https://api.multiavatar.com/Ava%20Thompson.png"
+    },
+    {
+      "id": 2,
+      "name": "Liam Patel",
+      "age": 31,
+      "gender": "Male",
+      "techStack": ["Angular", "TypeScript", "Firebase"],
+      "interest": ["Gaming", "AI", "Running"],
+      "bio": "Frontend enthusiast passionate about clean code and spicy food.",
+      "avatar": "https://api.multiavatar.com/Liam%20Patel.png"
+    },
+    {
+      "id": 3,
+      "name": "Sofia Kim",
+      "age": 27,
+      "gender": "Female",
+      "techStack": ["Vue.js", "Python", "Django"],
+      "interest": ["Photography", "Traveling", "Podcasts"],
+      "bio": "Backend lover with a flair for design. Catch me debugging or daydreaming about Bali.",
+      "avatar": "https://api.multiavatar.com/Sofia%20Kim.png"
+    },
+    {
+      "id": 4,
+      "name": "Noah Davis",
+      "age": 34,
+      "gender": "Male",
+      "techStack": ["React", "Next.js", "MongoDB"],
+      "interest": ["Rock Climbing", "Crypto", "Dogs"],
+      "bio": "I break and build things. Looking for someone to pair program through life with.",
+      "avatar": "https://api.multiavatar.com/Noah%20Davis.png"
+    },
+    {
+      "id": 5,
+      "name": "Maya Rodriguez",
+      "age": 25,
+      "gender": "Female",
+      "techStack": ["Flutter", "Firebase", "Dart"],
+      "interest": ["UI/UX Design", "Coffee", "Short Films"],
+      "bio": "Mobile dev who crafts beautiful apps and even better playlists.",
+      "avatar": "https://api.multiavatar.com/Maya%20Rodriguez.png"
+    },
+    {
+      "id": 6,
+      "name": "Ethan Zhang",
+      "age": 30,
+      "gender": "Male",
+      "techStack": ["Go", "Kubernetes", "PostgreSQL"],
+      "interest": ["DevOps", "Chess", "Philosophy"],
+      "bio": "Systems thinker and cloud tinkerer, looking for meaningful connections beyond 1s and 0s.",
+      "avatar": "https://api.multiavatar.com/Ethan%20Zhang.png"
+    },
+    {
+      "id": 7,
+      "name": "Isabella Nguyen",
+      "age": 28,
+      "gender": "Female",
+      "techStack": ["Svelte", "Node.js", "Prisma"],
+      "interest": ["Anime", "Machine Learning", "Dancing"],
+      "bio": "Creative coder who lives for animations and API design.",
+      "avatar": "https://api.multiavatar.com/Isabella%20Nguyen.png"
+    },
+    {
+      "id": 8,
+      "name": "Aiden Miller",
+      "age": 26,
+      "gender": "Male",
+      "techStack": ["React Native", "Redux", "Express.js"],
+      "interest": ["Cooking", "Startups", "Sci-Fi"],
+      "bio": "Startup junkie with a knack for building MVPs fast — swipe right if you love food and code.",
+      "avatar": "https://api.multiavatar.com/Aiden%20Miller.png"
+    },
+    {
+      "id": 9,
+      "name": "Chloe Bennett",
+      "age": 32,
+      "gender": "Female",
+      "techStack": ["Java", "Spring Boot", "MySQL"],
+      "interest": ["Reading", "Yoga", "Traveling"],
+      "bio": "Backend developer who finds peace in code and nature.",
+      "avatar": "https://api.multiavatar.com/Chloe%20Bennett.png"
+    },
+    {
+      "id": 10,
+      "name": "Lucas Wright",
+      "age": 29,
+      "gender": "Male",
+      "techStack": ["Python", "Flask", "Docker"],
+      "interest": ["Hiking", "Photography", "Gaming"],
+      "bio": "Passionate about scalable systems and scenic landscapes.",
+      "avatar": "https://api.multiavatar.com/Lucas%20Wright.png"
+    },
+    {
+      "id": 11,
+      "name": "Emily Clark",
+      "age": 27,
+      "gender": "Female",
+      "techStack": ["Ruby on Rails", "PostgreSQL", "JavaScript"],
+      "interest": ["Cooking", "Music", "Art"],
+      "bio": "Full-stack developer with a love for culinary arts and melodies.",
+      "avatar": "https://api.multiavatar.com/Emily%20Clark.png"
+    },
+    {
+      "id": 12,
+      "name": "Daniel Lee",
+      "age": 35,
+      "gender": "Male",
+      "techStack": ["C#", ".NET", "Azure"],
+      "interest": ["Basketball", "Tech Blogging", "Travel"],
+      "bio": "Enterprise developer who enjoys sharing knowledge and exploring new places.",
+      "avatar": "https://api.multiavatar.com/Daniel%20Lee.png"
+    },
+    {
+      "id": 13,
+      "name": "Grace Kim",
+      "age": 24,
+      "gender": "Female",
+      "techStack": ["JavaScript", "React", "Node.js"],
+      "interest": ["Dancing", "Movies", "Coding Challenges"],
+      "bio": "Frontend developer who dances through life and code.",
+      "avatar": "https://api.multiavatar.com/Grace%20Kim.png"
+    },
+    {
+      "id": 14,
+      "name": "Henry Adams",
+      "age": 33,
+      "gender": "Male",
+      "techStack": ["PHP", "Laravel", "MySQL"],
+      "interest": ["Fishing", "Reading", "Gaming"],
+      "bio": "Backend developer who finds joy in simplicity and nature.",
+      "avatar": "https://api.multiavatar.com/Henry%20Adams.png"
+    },
+    {
+      "id": 15,
+      "name": "Olivia Martinez",
+      "age": 26,
+      "gender": "Female",
+      "techStack": ["Swift", "iOS Development", "Firebase"],
+      "interest": ["Photography", "Traveling", "Music"],
+      "bio": "iOS developer capturing moments through code and lens.",
+      "avatar": "https://api.multiavatar.com/Olivia%20Martinez.png"
+    },
+    {
+      "id": 16,
+      "name": "Benjamin Scott",
+      "age": 28,
+      "gender": "Male",
+      "techStack": ["JavaScript", "Vue.js", "Node.js"],
+      "interest": ["Cycling", "Cooking", "Tech Meetups"],
+      "bio": "Full-stack developer who pedals through challenges and recipes.",
+      "avatar": "https://api.multiavatar.com/Benjamin%20Scott.png"
+    },
+    {
+      "id": 17,
+      "name": "Sophia Turner",
+      "age": 30,
+      "gender": "Female",
+      "techStack": ["Kotlin", "Android Development", "SQLite"],
+      "interest": ["Painting", "Yoga", "Reading"],
+      "bio": "Android developer painting the world with apps and colors.",
+      "avatar": "https://api.multiavatar.com/Sophia%20Turner.png"
+    },
+    {
+      "id": 18,
+      "name": "Jack Wilson",
+      "age": 31,
+      "gender": "Male",
+      "techStack": ["Python", "Django", "PostgreSQL"],
+      "interest": ["Gaming", "Music", "Hiking"],
+      "bio": "Backend developer who hikes through code and mountains.",
+      "avatar": "https://api.multiavatar.com/Jack%20Wilson.png"
+    },
+    {
+      "id": 19,
+      "name": "Mia Davis",
+      "age": 29,
+      "gender": "Female",
+      "techStack": ["JavaScript", "Angular", "Node.js"],
+      "interest": ["Cooking", "Dancing", "Traveling"],
+      "bio": "Frontend developer who spices up life with code and cuisine.",
+      "avatar": "https://api.multiavatar.com/Mia%20Davis.png"
+    },
+    {
+      "id": 20,
+      "name": "William Brown",
+      "age": 34,
+      "gender": "Male",
+      "techStack": ["C++", "Qt", "OpenGL"],
+      "interest": ["Photography", "Chess", "Reading"],
+      "bio": "Software engineer capturing life through lenses and logic.",
+      "avatar": "https://api.multiavatar.com/William%20Brown.png"
+    }
+  ]
+  
