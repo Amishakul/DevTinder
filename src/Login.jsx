@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react'
 import { checkValidData } from './Utils/ValidData';
 import { auth } from "./Utils/Firebase";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
-import { useNavigate } from 'react-router-dom';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile} from 'firebase/auth';
+import { useDispatch } from 'react-redux';
+import { addUser } from './Utils/userSlice';
 
 const Login = () => {
 
@@ -10,7 +11,9 @@ const Login = () => {
 
   const [errorMessage, setErrorMessage] = useState(null);
 
-  const navigate = useNavigate();
+
+
+  const dispatch = useDispatch();
   
   const name = useRef(null);
   const email = useRef(null);
@@ -32,7 +35,20 @@ const Login = () => {
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
-    alert("Account created successfully, Login to Continue")
+
+    updateProfile(user, {
+      displayName: name.current.value,
+    }).then(() => {
+      // Profile Updated!
+
+      // dispatch an action
+      const {uid, email, displayName} = auth.currentUser;
+
+      dispatch(addUser({uid: uid, email: email, displayName: displayName}));
+
+    }).catch((error) => {
+      setErrorMessage(error.message);
+    });
     // ...
   })
   .catch((error) => {
@@ -55,7 +71,7 @@ signInWithEmailAndPassword(auth, email.current.value, pass.current.value)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-    navigate('/profile');
+    
     // ...
   })
   .catch((error) => {
