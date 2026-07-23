@@ -1,0 +1,51 @@
+npm init -> to initized the project, it creates a package.json configuration file. -> it is basically a metadata, index asscociated with this project named devTinder.
+
+app.js -> main starting point of the project, we will initized our code, here we will write our code.
+
+
+PS C:\devTinder> node src/app.js
+This is my project!
+PS C:\devTinder>
+
+once we create a server we can listen to the incoming request from the outside world.
+
+express.js -> nodejs framework
+- npm install express
+
+when we installed npm express, all the express code came into node module folder.
+
+nodejs module contains code files of whichever package we install. it gets the code from the internet source.
+
+"dependencies": {
+    "express": "^5.2.1"
+  } -> our project is dependent on express package. When you install any package that package name will automatically added into the dependencies object in package.json.
+
+  all these dependencies are installed in nodejs module folder.
+
+  express.js is also dependent on other dependencies, hence there are other folders in nodejs module apart from express folder.
+
+  node module folder has code of all the dependencies.
+
+  package-lock.json -> 
+
+  major version upgrade can break your existing applicaions.
+
+  express: ^ 4.19.2 -> auto update to 4.x.x
+
+  express: 4.19.2 -> will always use this version, will never auto update
+
+  express: ~ 4.19.2 
+
+  major version update will not auto update, only patch updates and minor version updates auto upgrade happens.
+
+  package.json contains (express: ^4.19.2) -> does not show the exact version. Tells the nomenclature, what versioning system it should use.
+
+  applicaion always uses the latest version.
+
+  package.lock.json -> tells you the exact version.
+
+  Request -> Listen -> Response
+
+  // /, /test, /hello all these are routes
+
+  nodemon -> whenever i will make any changes to the code, it will automatically refresh the server.

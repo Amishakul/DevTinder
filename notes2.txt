@@ -1,0 +1,1 @@
+If we delete our node modules folder, we can again regain it. write command: npm install, it will check our package.json file and will install all the necessary dependencies.
