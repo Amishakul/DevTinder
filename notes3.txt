@@ -1,0 +1,5 @@
+GET, POST, DELETE, UPDATE, etc -> THESE ALL ARE HTTP METHODS BY HTTP PROTOCOL.
+
+When you write a url on the top of the browser, and search it using that url, it makes a GET api call by default.
+
+Postman is used to test api calls.

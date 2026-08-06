@@ -1,1 +1,19 @@
-If we delete our node modules folder, we can again regain it. write command: npm install, it will check our package.json file and will install all the necessary dependencies.
+- If we delete our node modules folder, we can again regain it. write command: npm install, it will check our package.json file and will install all the necessary dependencies.
+
+- Why to commit package.lock.json on github? 
+
+app.use("/", (req, res) => {
+    res.send("Hello from the dashboard!")
+}); -> when we use, use method anything starting with particular route mentioned will get considered so it will not matter what we write after that route. It will not make any difference. It will still print the same output.
+
+i.e. if your route is starting from let's say /test, then anything written after that route will match inside the route handler.
+
+For eg: /hello will print hello hello hello! and /hello/xyz or hello/xyz/123/124 will also print hello hello hello!
+
+Corner Case: 1. route: /hello123 -> will not match
+
+2. route: /hello/xyz -> it will match
+
+Order of the routing code changes code execution and matters a lot.
+
+Otherwise the rest of the routes will never get a chance to execute.
