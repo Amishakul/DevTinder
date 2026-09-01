@@ -1,0 +1,115 @@
+app.get("/user", (req, res) => {
+    // This is Router Handler function
+    //res.send("Router Handler 1")
+}); -> if we don't send any response from the server, the request will just keep on hang around in the air in a infinite loop
+
+app.get("/user", (req, res) => {
+    // This is Router Handler function
+    //res.send("Router Handler 1")
+    console.log("Handling the route user!!!")
+}); -> same case as this as above. The console is just printed on the terminal of the server code.
+
+
+
+app.get("/user", (req, res) => {
+    // This is Router Handler function
+    //res.send("Router Handler 1")
+    console.log("Handling the route user!!!")
+    res.send("Response!!")
+}, 
+(req, res) => {
+    console.log("Handling the route user 2!!")
+    res.send("2nd Response!!")
+}
+); -> Only response will be printed
+
+
+
+
+app.get("/user", (req, res) => {
+    // This is Router Handler function
+    //res.send("Router Handler 1")
+    console.log("Handling the route user!!!")
+    // res.send("Response!!")
+}, 
+(req, res) => {
+    console.log("Handling the route user 2!!")
+    res.send("2nd Response!!")
+}
+); -> it will not print response 2, the request will just keep on hang around in the air in a infinite loop
+
+
+
+
+app.get("/user", (req, res, next) => {
+    // This is Router Handler function
+    //res.send("Router Handler 1")
+    console.log("Handling the route user!!!")
+    // res.send("Response!!")
+    next(); // will go to next route handler
+}, 
+(req, res) => {
+    console.log("Handling the route user 2!!")
+    res.send("2nd Response!!")
+}
+); -> it will print 2nd Response
+
+
+
+app.get("/user", (req, res, next) => {
+    // This is Router Handler function
+    //res.send("Router Handler 1")
+    console.log("Handling the route user!!!")
+     res.send("Response!!")
+    next(); // will go to next route handler
+}, 
+(req, res) => {
+    console.log("Handling the route user 2!!")
+    res.send("2nd Response!!")
+}
+); -> it will print Response, the tcp connection made betweeen client and server is closed now as the response from the 1st route handler is made, now it will not make any response for 2nd route handler as the connection is already closed now after handling 1st route handler response. Don't write the code like this at all.
+
+
+
+app.get("/user", (req, res, next) => {
+    // This is Router Handler function
+    //res.send("Router Handler 1")
+    console.log("Handling the route user!!!")
+    
+    next(); // will go to next route handler
+    res.send("Response!!")
+}, 
+(req, res) => {
+    console.log("Handling the route user 2!!")
+    res.send("2nd Response!!")
+}
+); -> 2nd Response will come in the output. because you are trying to send response again to the client when the request is already fullfilled. or we can say like this: the tcp connection made betweeen client and server is closed now as the response from the 1st route handler is made, now it will not make any response for 2nd route handler as the connection is already closed now after handling 1st route handler response.
+
+
+
+app.get("/user", (req, res, next) => {
+    // This is Router Handler function
+    //res.send("Router Handler 1")
+    console.log("Handling the route user!!!")
+
+    next(); // will go to next route handler
+    // res.send("Response!!")
+}, 
+(req, res, next) => {
+    console.log("Handling the route user 2!!")
+    // res.send("2nd Response!!")
+    next();
+},
+(req, res, next) => {
+    console.log("Handling the route user 3!!")
+    // res.send("3rd Response!!")
+    next();
+},
+(req, res, next) => {
+    console.log("Handling the route user 4!!")
+    // res.send("4th Response!!")
+    next()
+}
+); -> Cannot GET /user because express expects that there can be a another router handler after next, but there is not.
+
+Make how many router handlers you want but at the end response should be sent.
